@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true" class="background">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div>
+    <ion-grid>
+      <div class="image-container">
+        <img src="/assets/imgs/luri_color.png" alt="" />
+      </div>
+      <ion-text color="white" style="text-align: center">
+        <!-- <h1 style="margin-top: 50px; margin-bottom: 0" class="font-900">
+          BUSCAR POR
+        </h1> -->
+        <h1
+          class="font-900"
+          style="margin: 110px; margin-bottom: 50px; color: #c51821"
+        >
+          CATEGORÍAS
+        </h1>
+      </ion-text>
+
+      <div class="row-category">
+        <ion-row>
+          <ion-col
+            size="6"
+            *ngFor="let category of categories"
+            (click)="navigateToCategory(category)"
+          >
+            <div class="card">
+              <img [src]="category.icono_url" style="padding-top: 3px" />
+              <ion-label
+                class="font-900"
+                style="font-size: 1rem; margin-top: 10px"
+              >
+                {{category.nombres}}
+              </ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,83 @@
+<ion-content>
+  <div class="content-publication">
+    <div class="img-logo">
+      <img src="assets/imgs/logo_png.png" alt="" />
+    </div>
+
+    <ion-card class="card-category" *ngIf="search_category_url_image_params">
+      <ion-card-content>
+        <ion-row>
+          <ion-col size="3" class="img-category">
+            <img
+              alt="Silhouette of mountains"
+              [src]="search_category_url_image_params"
+            />
+          </ion-col>
+
+          <ion-col size="9">
+            <div class="title-content-category">
+              <ion-text class="title-category"
+                >{{search_category_name_params}}</ion-text
+              >
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+    <ion-card
+      class="card-publication"
+      *ngFor="let publication of publications; let i = index"
+    >
+      <ion-card-content>
+        <ion-row>
+          <ion-col size="3" class="img-publication">
+            <img alt="Silhouette of mountains" src="assets/icon/no_user.png" />
+          </ion-col>
+          <ion-col size="9">
+            <div class="">
+              <ion-text class="title-publication-user"
+                >{{publication.persona_dato}}</ion-text
+              >
+            </div>
+
+            <div>
+              <ion-text class="title-publication-category"
+                >{{publication.tipo_servicio_nombre}}</ion-text
+              >
+            </div>
+            <div>
+              <ion-icon
+                name="star"
+                class="color-star"
+                *ngFor="let rating of [1,2,3,4,5]; let j = index"
+                [ngClass]="{'color-star-gray': j >= publication.calificacion}"
+              >
+              </ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <div class="publication-number">
+          <ion-text> +51 {{publication.persona_numero_celular}} </ion-text>
+        </div>
+        <div class="publication-email">
+          <ion-text> {{publication.persona_email}} </ion-text>
+        </div>
+
+        <div class="button-contact">
+          <ion-button> CONTACTAR </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-infinite-scroll
+      threshold="25%"
+      position="bottom"
+      (ionInfinite)="loadData(search_params,search_category_params)"
+    >
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Cargando más publicaciones ..."
+      ></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>

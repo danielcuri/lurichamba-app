@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Black.ttf") format("truetype");
+}
+
+.img-logo {
+  text-align: center !important;
+  margin-top: 13px;
+
+  img{
+    margin-top: 30px;
+    width: 63%;
+  }
+}
+
+.content-publication {
+  padding: 0px 1.1rem 0px 1.1rem;
+}
+
+.img-category {
+  text-align: center !important;
+}
+.img-publication {
+  text-align: center !important;
+}
+
+.card-category {
+  background: #34a0b3;
+
+  ion-card-content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+.card-publication {
+  background: white !important;
+  border: 1px solid #34a0b3 !important; /* Añadir el borde completo */
+
+  border-radius: 0.8rem !important;
+  --ion-card-border-color: #34a0b3; /* Asegurar que el color del borde sea aplicado */
+
+  ion-card-content {
+    --ion-card-content-border-color: #34a0b3 !important; /* Asegurar que el color del borde sea aplicado a ion-card-content */
+
+    --border-color: #34a0b3 !important;
+    border-radius: 0.8rem !important;
+
+    .button-contact {
+      margin-top: 25px;
+      text-align: center !important;
+
+      ion-button {
+        --padding-start: 35px;
+        --padding-end: 35px;
+        --background: #f2a007;
+        font-size: 20px;
+        --border-radius: 0.8rem !important;
+        font-weight: 100;
+        color: white;
+        height: 40px;
+        line-height: 10px !important;
+        --margin-top: -5px !important;
+        --margin-bottom: -5px !important;
+      }
+
+      .button-a{
+        --padding-start: 35px;
+        --padding-end: 35px;
+        --background: #f2a007;
+        font-size: 20px;
+        --border-radius: 0.8rem !important;
+        font-weight: 100;
+        color: white;
+        height: 40px;
+        line-height: 10px !important;
+        --margin-top: -5px !important;
+        --margin-bottom: -5px !important;
+      }
+    }
+  }
+}
+ion-content {
+  --background: none;
+  --background: url("/assets/imgs/background.jpg") 0 0/100% 100% no-repeat;
+}
+
+.title-content-category {
+  text-align: center !important;
+  margin-top: 25px;
+}
+
+.title-category {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  margin-bottom: 0 !important;
+  color: white !important;
+}
+.title-publication-category {
+  color: black !important;
+  font-weight: bold !important;
+  font-weight: 600 !important;
+}
+.title-publication-user {
+  font-weight: 900 !important;
+  margin-bottom: 0 !important;
+  color: black !important;
+}
+
+ion-grid {
+  margin-top: 180px;
+}
+
+.publication-number {
+  color: black !important;
+  // font-weight: 600 !important;
+}
+
+.publication-email {
+  color: black !important;
+  // font-weight: 600 !important;
+}
+
+.color-star {
+  color: #f2a007;
+  font-size: 24px;
+}
+
+.color-star-gray {
+  color: #c4c4c4;
+
+  font-size: 24px;
+}

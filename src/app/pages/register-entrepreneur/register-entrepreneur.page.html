@@ -1,0 +1,163 @@
+<ion-content [fullscreen]="true">
+  <div class="register">
+    <div class="image-container">
+      <img src="/assets/imgs/luri_color.png" alt="" />
+    </div>
+
+    <div class="text-register">
+      <h1 style="color: #8DBC22 !important">REGÍSTRATE</h1>
+    </div>
+    <ion-button expand="full" shape="round" border-radius="5px" class="green"
+      ><b class="font-900">EMPRENDEDOR</b></ion-button
+    >
+    <form (submit)="register()">
+      <ion-list lines="none">
+        <div *ngIf="errors['nombres']">
+          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
+          <ion-text color="warning"> {{errors['nombres']}}</ion-text>
+        </div>
+        <ion-item>
+          <ion-input
+            placeholder="NOMBRES"
+            type="text"
+            name="nombres"
+            [(ngModel)]="userRegister.nombres"
+            maxlength="50"
+          >
+          </ion-input>
+        </ion-item>
+
+        <div *ngIf="errors['apellido_paterno']">
+          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
+          <ion-text color="warning"> {{errors['apellido_paterno']}}</ion-text>
+        </div>
+        <ion-item>
+          <ion-input
+            placeholder="APELLIDO PATERNO"
+            type="text"
+            name="apellido_paterno"
+            [(ngModel)]="userRegister.apellido_paterno"
+            maxlength="50"
+          />
+        </ion-item>
+        <div *ngIf="errors['apellido_materno']">
+          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
+          <ion-text color="warning"> {{errors['apellido_materno']}}</ion-text>
+        </div>
+        <ion-item>
+          <ion-input
+            placeholder="APELLIDO MATERNO"
+            type="text"
+            name="apellido_materno"
+            [(ngModel)]="userRegister.apellido_materno"
+            maxlength="50"
+          />
+        </ion-item>
+        <div *ngIf="errors['tipo_documento_id']">
+          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
+          <ion-text color="warning"> {{errors['tipo_documento_id']}}</ion-text>
+        </div>
+        <ion-item>
+          <ion-select
+            aria-label="Tipo de documento"
+            name="tipo_documento_id"
+            [(ngModel)]="userRegister.tipo_documento_id"
+          >
+            <ion-select-option value="" disabled
+              >Selecciona una opción</ion-select-option
+            >
+
+            <ion-select-option value="1"
+              >DOCUMENTO NACIONAL DE IDENTIDAD</ion-select-option
+            >
+            <ion-select-option value="2"
+              >CARNET DE EXTRANJERIA</ion-select-option
+            >
+            <ion-select-option value="3">PASAPORTE</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <div *ngIf="errors['numero_documento']">
+          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
+          <ion-text color="warning"> {{errors['numero_documento']}}</ion-text>
+        </div>
+
+        <ion-item>
+          <ion-input
+            placeholder="DOCUMENTO"
+            type="number"
+            name="numero_documento"
+            [(ngModel)]="userRegister.numero_documento"
+          />
+        </ion-item>
+        <div *ngIf="errors['email']">
+          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
+          <ion-text color="warning"> {{errors['email']}}</ion-text>
+        </div>
+        <ion-item>
+          <ion-input
+            placeholder="CORREO"
+            type="text"
+            name="email"
+            [(ngModel)]="userRegister.email"
+          />
+        </ion-item>
+        <div *ngIf="errors['numero_celular']">
+          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
+          <ion-text color="warning"> {{errors['numero_celular']}}</ion-text>
+        </div>
+        <ion-item>
+          <ion-input
+            placeholder="N° CELULAR"
+            type="number"
+            name="numero_celular"
+            [(ngModel)]="userRegister.numero_celular"
+          />
+        </ion-item>
+        <div *ngIf="errors['direccion_fiscal']">
+          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
+          <ion-text color="warning"> {{errors['direccion_fiscal']}}</ion-text>
+        </div>
+
+        <ion-item>
+          <ion-input
+            placeholder="DIRECCIÓN"
+            type="text"
+            name="direccion_fiscal"
+            [(ngModel)]="userRegister.direccion_fiscal"
+          />
+        </ion-item>
+
+        <div *ngIf="errors['password']">
+          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
+          <ion-text color="warning"> {{errors['password']}}</ion-text>
+        </div>
+        <ion-item>
+          <ion-input
+            placeholder="CONTRASEÑA"
+            type="text"
+            name="password"
+            [(ngModel)]="userRegister.password"
+          />
+        </ion-item>
+      </ion-list>
+      <ion-checkbox
+        labelPlacement="end"
+        name="aceptacion_termino"
+        [(ngModel)]="userRegister.aceptacion_termino"
+      >
+        <label class="black">ACEPTO </label>
+        <label class="yellow">TERMINOS Y CONDICIONES</label></ion-checkbox
+      >
+      <ion-button type="submit" expand="full" shape="round" border-radius="5px"
+        class="register-button">Registrate</ion-button
+      >
+    </form>
+  </div>
+  <div class="img-register">
+    <img src="assets/imgs/logo_blanco_sjl.png" alt="" />
+  </div>
+
+  <div class="img-footer">
+    <img src="assets/imgs/jesus.png" alt="">
+  </div>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <!-- <ion-toolbar>
+    <ion-title>main</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">esto es main</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <div class="img-header">
+    <img src="assets/imgs/BUSCAR-SERVICIO.png" alt="" />
+  </div>
+  <form (submit)="goSearchCategory()">
+
+  <div class="inputs">
+      <ion-list lines="none">
+        <ion-item>
+          <ion-input
+            placeholder="Ejemplo: Gasfitero"
+            type="text"
+            name="numero_documento" [(ngModel)]="search.name"
+          />
+        </ion-item>
+      </ion-list>
+  </div>
+
+  <div class="buttons">
+    <ion-button type="submit" shape="round" size="large" border-radius="10px">
+      BUSCAR
+    </ion-button>
+  </div>
+</form>
+
+  <div class="buttons-categoria">
+    <ion-button
+      shape="round"
+      size="large"
+      border-radius="8px"
+      (click)="goByCategory()"
+      >BUSCA POR CATEGORÍA</ion-button
+    >
+  </div>
+
+  
+</ion-content>
+<ion-footer>
+  <div class="img-footer">
+    <img src="assets/imgs/jesus.png" alt="">
+  </div>
+</ion-footer>

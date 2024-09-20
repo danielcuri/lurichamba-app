@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+ion-content {
+  --background: none;
+  --background: url("/assets/imgs/background.png") 0 0/100% 100% no-repeat;
+  .img-header {
+    text-align: center !important;
+    img {
+      width: 90%;
+    }
+  }
+  
+  .main {
+    --background: none !important;
+    background: transparent !important;
+    margin-top: 50%;
+
+    .yellow {
+      --background: #f2a007;
+      --background-hover: #e0b15c;
+      --background-activated: #e0b15c;
+      --background-focused: #e0b15c;
+      --border-radius: 1rem !important;
+      border-radius: 1rem !important;
+      padding: 0 4rem;
+      color: white !important;
+      font-size: 25px !important;
+      height: 40px;
+      font-weight: 100;
+
+      line-height: 30px !important;
+      // height: 3rem !important;
+      // font-size: large;
+    }
+    .red {
+      --background: #c51821;
+      --background-hover: #971a20;
+      --background-activated: #971a20;
+      --background-focused: #971a20;
+      --border-radius: 1rem !important;
+      border-radius: 1rem !important;
+      padding: 0 4rem;
+      margin-top: 10px !important;
+      // height: 3rem !important;
+      // font-size: large;
+      color: white;
+      font-size: 25px !important;
+      height: 40px;
+      font-weight: 100;
+
+      line-height: 30px !important;
+    }
+    .sub-title {
+      padding: 0 2rem;
+      text-align: center;
+      font-size: 18px;
+      color: black;
+      margin: 0;
+      margin-bottom: 0;
+      font-weight: 600;
+
+      b {
+        color: #c51821 !important;
+        font-weight: 600;
+
+      }
+    }
+    .sub-title2 {
+      padding: 0 6rem;
+      text-align: center;
+      font-size: 18px;
+      color: black;
+      margin: 0;
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+    .line-text {
+      color: #c51821 !important;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 0;
+      margin-top: -16px;
+      font-size: 25px;
+      font-weight: 100;
+    }
+  }
+}
+ion-footer {
+  .img-footer {
+    text-align: center !important;
+    img {
+      width: 50%;
+    }
+  }
+}

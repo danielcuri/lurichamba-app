@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+.font-900 {
+  font-weight: 900 !important;
+}
+
+ion-content {
+  --background: none;
+  --background: url("/assets/imgs/background.jpg") 0 0/100% 100% no-repeat;
+
+  .image-container img {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    bottom: 0;
+    width: 50% !important; /* Adjust the width as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-header {
+    text-align: center !important;
+    img {
+      width: 80%;
+    }
+  }
+
+  .register {
+    padding: 0px 3rem 0px 3rem;
+    margin-top: 3vh;
+    ion-list {
+      --background: transparent !important;
+      background: transparent !important;
+      margin-top: 1rem;
+    }
+    ion-item {
+      border-radius: 0.55rem;
+      padding: 0.6rem 0.6rem !important;
+
+      background: rgb(255, 255, 255);
+      border: solid 3px rgb(196, 70, 70);
+      margin-bottom: 5px;
+      padding-left: 16px;
+      --min-height: 5px;
+
+      ion-input {
+        text-align: left;
+        --placeholder-color: gray;
+        color: gray;
+      }
+      ion-select {
+        color: gray;
+      }
+    }
+    ion-checkbox {
+      margin-left: 2.5rem;
+      --border-color: #f2a007;
+      --checkbox-background-checked: #f2a007 !important;
+      --border-color-checked: #f2a007;
+    }
+    .yellow {
+      color: rgb(27, 114, 221);
+      font-size: 11px;
+      text-decoration: underline;
+    }
+    .black {
+      color: black;
+      font-size: 11px;
+    }
+
+    .red {
+      --background: #c51821;
+      --background-hover: #971a20;
+      --background-activated: #971a20;
+      --background-focused: #971a20;
+      --border-radius: 1rem !important;
+      border-radius: 1rem !important;
+      padding: 0 2rem;
+      margin-top: 25px !important;
+      // height: 3rem !important;
+      // font-size: large;
+
+      color: white;
+      font-size: 25px !important;
+      height: 40px;
+      font-weight: 100;
+
+      line-height: 30px !important;
+    }
+
+    .register-button {
+      --background: #c51821;
+      --background-hover: #971a20;
+      --background-activated: #971a20;
+      --background-focused: #971a20;
+      --border-radius: 1rem !important;
+      border-radius: 1rem !important;
+      padding: 0 4rem;
+      height: 3rem !important;
+      font-size: large;
+    }
+
+    .text-register {
+      text-align: center !important;
+
+      margin-top: 150px;
+      h1 {
+        font-size: 28px !important;
+        color: white !important;
+        font-weight: 900 !important;
+      }
+    }
+  }
+
+  ion-button {
+    text-align: center !important;
+
+    color: white !important;
+  }
+}
+
+.img-register {
+  margin-top: 15px !important;
+  text-align: center !important;
+  img {
+    width: 50%;
+  }
+}
+
+.img-footer {
+  text-align: center !important;
+  img {
+    width: 50%;
+  }
+}

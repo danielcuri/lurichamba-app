@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+ion-content {
+  --background: none;
+  --background: url("/assets/imgs/background.jpg") 0 0/100% 100% no-repeat;
+ 
+  .img-header {
+    text-align: center !important;
+    margin-top: 20px !important;
+    margin-bottom: -15px !important;
+    margin: 0;
+
+    img {
+      width: 90%;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .img-logo {
+    text-align: center !important;
+    margin-top: 75px !important;
+    margin: 0;
+
+    img {
+      width: 60%;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .inputs {
+    padding: 0px 3rem 0px 3rem;
+    margin-bottom: 0;
+    margin-top: 0 !important;
+    ion-list {
+      --background: transparent !important;
+      background: transparent !important;
+    }
+    ion-item {
+    
+      --border-radius: 1.2rem;
+      padding: 0.6rem 0.6rem !important;
+      margin-top: -10px;
+      margin-bottom: 0;
+      --padding-start: 16px;
+      --padding-end: 16px;
+      --min-height: 25px;
+      margin: 0;
+
+      background: rgb(255, 255, 255);
+      border: solid 3px rgb(196, 70, 70);
+      margin-bottom: 16px;
+      border-radius: 1.2rem;
+      padding-left: 16px;
+
+
+      ion-input {
+        text-align: left;
+        --placeholder-color: gray;
+        color: gray;
+        --padding-start: 16px;
+        --padding-end: 16px;
+        --min-height: 80px;
+        font-size: 17px !important;
+      
+      }
+      ion-select {
+        color: gray;
+      }
+    }
+  }
+
+  .buttons {
+    align-items: center !important; /* Align items vertically */
+    display: flex; /* Enable flexbox layout */
+    justify-content: center !important; /* Center content horizontally */
+    
+    margin-top: 7px;
+    ion-button {
+      --border-radius: 0.8rem;
+      --background: #c51821;
+      --padding-start: 65px !important;
+      --padding-end: 65px !important;
+      color: white !important;
+      --min-height: 30px !important;
+      font-size: 20px !important;
+      margin: 0;
+    }
+  }
+  .buttons-categoria {
+    align-items: center !important; /* Align items vertically */
+    display: flex; /* Enable flexbox layout */
+    margin-top: 70px;
+    justify-content: center !important; /* Center content horizontally */
+    ion-button {
+      color: white !important;
+      --border-radius: 0.8rem;
+      --background: #f2a007;
+      // font-weight: 300 !important;
+      --padding-start: 25px !important;
+      --padding-end: 25px !important;
+      --min-height: 60px;
+      font-size: 21px !important;
+    }
+  }
+  ion-text {
+    h1 {
+      text-align: center !important;
+      font-weight: 900 !important;
+    }
+  }
+}
+ion-footer {
+  .img-footer {
+    text-align: center !important;
+    img {
+      width: 50%;
+    }
+  }
+}

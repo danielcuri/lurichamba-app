@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <div class="img-header">
+    <img src="assets/imgs/luri_blanco.png" alt="" />
+  </div>
+  <div class="text-login">
+    <h1>INICIAR SESIÓN</h1>
+  </div>
+ <div class="login">
+  
+  <form (submit)="login()">
+    <ion-list lines="none">      
+      <ion-item>
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-input placeholder="Correo" type="text" name="email" [(ngModel)]="userData.email"/>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input placeholder="Contraseña" type="password" name="password"  [(ngModel)]="userData.password"/>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit" expand="full" shape="round" border-radius="5px">Ingresar</ion-button>
+    <div class="img-login">
+      <img src="assets/imgs/logo_blanco_sjl.png" alt="" />
+    </div>
+    <div class="app-version">
+      <p>Version: 1.0</p> 
+    </div>
+  </form>
+ </div>
+</ion-content>

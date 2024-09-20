@@ -1,0 +1,7 @@
+{
+  "name": "lurichamba-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,78 @@
+ion-content {
+  --background: none;
+  // --background: url('/assets/img/background.png') 0 0/100% 100% no-repeat;
+  background-color: #c51821;
+  .img-header {
+    text-align: center !important;
+    img {
+      width: 80%;
+    }
+  }
+  .text-login {
+    text-align: center !important;
+    color: white !important;
+
+    margin-top: 10px !important;
+    h1 {
+      font-size: 28px !important;
+    }
+  }
+  .login {
+    --background: none !important;
+    background: transparent !important;
+    margin-top: 4vh;
+
+    padding: 0px 1.5rem 0px 1.5rem;
+
+    ion-list {
+      --background: transparent !important;
+      background: transparent !important;
+      margin-top: 1rem;
+    }
+    ion-item {
+      --border-radius: 0.5rem;
+      padding: 0.6rem 0.6rem !important;
+
+      ion-input {
+        text-align: center;
+      }
+    }
+    ion-button {
+      --background: #f2a007;
+      --background-hover: #e0b15c;
+      --background-activated: #e0b15c;
+      --background-focused: #e0b15c;
+
+      --border-radius: 1rem !important;
+      border-radius: 1rem !important;
+      padding: 0 4rem;
+      height: 3rem !important;
+      color: white;
+      margin-top: 25px !important;
+      font-size: 18px;
+    }
+  }
+
+  .img-login {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 65px;
+    color: #fff;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .app-version {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+}
