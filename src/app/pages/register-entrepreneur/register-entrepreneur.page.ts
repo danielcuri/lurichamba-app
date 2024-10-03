@@ -11,12 +11,8 @@ export class RegisterEntrepreneurPage implements OnInit {
   userRegister: any = {
     nombres: '',
     apellido_paterno: '',
-    apellido_materno: '',
-    numero_documento: '',
-    email: '',
-    direccion_fiscal: '',
-    password: '',
-    tipo_documento_id: '',
+    apellido_materno: '',   
+    email: '',       
     aceptacion_termino: 0,
     numero_celular: '',
   };
@@ -37,12 +33,12 @@ export class RegisterEntrepreneurPage implements OnInit {
       : 0;
 
     if (!this.userRegister.aceptacion_termino) {
-      await this.showTermsToast();
+      await this.showTermsToast('Debes aceptar los términos y condiciones para continuar.','toast-danger-shade');
       return;
     }
 
     const userRegister = this.userRegister; // Get form values
-
+  
     await this.loadingCtrl
       .create({
         message: 'Registrandose...',
@@ -51,16 +47,16 @@ export class RegisterEntrepreneurPage implements OnInit {
         loading.present();
         return new Promise(async (resolve, reject) => {
           this.userService
-            .register(userRegister)
+            .registerEntrepreneur(userRegister)
             .then(async (info) => {
               resolve(info);
               loading.dismiss();
               if (!info.respuesta) {
                 alert(info.mensaje);
                 return;
-              }
-
-              await this.router.navigate(['login'], {});
+              }              
+              await this.showTermsToast('Solicitud de registro enviada, la Gerencia de Desarrollo Economica se comunicara con usted.','toast-success-shade');
+              //await this.router.navigate(['login'], {});
             })
             .catch((err) => {
               console.log(this.userRegister);
@@ -73,11 +69,11 @@ export class RegisterEntrepreneurPage implements OnInit {
       });
   }
 
-  async showTermsToast() {
+  async showTermsToast(message:string,cssClass:string) {
     const toast = await this.toastCtrl.create({
-      message: 'Debes aceptar los términos y condiciones para continuar.',
-      duration: 2000, // Display for 2 seconds
-      color: 'warning', // Set toast color (optional)
+      message,
+      duration: 5000, // Display for 2 seconds
+      cssClass // Set toast color (optional)
     });
     await toast.present();
   }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, enableProdMode } from '@angular/core';
+import { Router,ActivatedRoute  } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 import { UserService } from 'src/app/services/user.service';
 
@@ -15,11 +15,24 @@ export class LoginPage implements OnInit {
   };
   constructor(
     private router: Router,
+    private activeRouter:ActivatedRoute ,
     private loadingCtrl: LoadingController,
     private userService: UserService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('here')
+    this.activeRouter.queryParams.subscribe(params => {
+      const paramName = params['paramName']; // Aquí obtienes el valor del parámetro.
+      console.log({paramName})
+      if (paramName) {
+        // Haz algo con `paramName`.
+        this.userData.email = paramName
+      } else {
+        // Parametro no recibido, haz algo más si es necesario.
+      }
+    });
+  }
   async goMain() {
     console.log('aaaa');
     await this.router.navigate(['main'], {});

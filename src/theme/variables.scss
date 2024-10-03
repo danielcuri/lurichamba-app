@@ -1,2 +1,8 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+.toast-success-shade {
+    --background: var(--ion-color-success-shade);
+    --color: #ffffff; /* O el color que prefieras */
+  }
+  .toast-danger-shade {
+    --background: var(--ion-color-danger-shade);
+    --color: #ffffff; /* O el color que prefieras */
+  }

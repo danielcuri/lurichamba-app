@@ -33,6 +33,25 @@ export class RegisterPage implements OnInit {
 
   ngOnInit() {
     this.errors;
+    console.log('here')
+    this.clearFields()
+  }
+  ionViewWillLeave(){
+    this.clearFields()
+  }
+  async clearFields(){
+    this.userRegister = {
+      nombres: '',
+      apellido_paterno: '',
+      apellido_materno: '',
+      numero_documento: '',
+      email: '',
+      direccion_fiscal: '',
+      password: '',
+      tipo_documento_id: '',
+      aceptacion_termino: 0,
+      numero_celular: '',
+    };
   }
   async register() {
     this.userRegister.aceptacion_termino = this.userRegister.aceptacion_termino
@@ -58,12 +77,17 @@ export class RegisterPage implements OnInit {
             .then(async (info) => {
               resolve(info);
               loading.dismiss();
+             
               if (!info.respuesta) {
                 alert(info.mensaje);
                 return;
               }
-
-              await this.router.navigate(['login'], {});
+              alert(info.mensaje)
+              await this.router.navigate(['login'], {
+                queryParams: { 
+                  paramName: this.userRegister.email || null // Si `paramValue` es `undefined` o `null`, se enviará como `null`.
+                }
+              });
             })
             .catch((err) => {
               console.log(this.userRegister)

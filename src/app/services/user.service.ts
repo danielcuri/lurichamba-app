@@ -67,4 +67,21 @@ export class UserService {
         });
     });
   }
+  registerEntrepreneur(data: any): Promise<RegisterResponse> {
+    return new Promise((resolve, reject) => {
+      this.http
+        .post<RegisterResponse>(`${environment.url}/auth/sendEmailEntrepreneur`, data)
+        .subscribe({
+          next: (v) => {
+            if (!v.respuesta) {
+              reject(v.mensaje);
+            }
+
+            resolve(v);
+          },
+          error: (e) => reject(e),
+          complete: () => console.info('complete'),
+        });
+    });
+  }
 }

@@ -53,42 +53,6 @@
             maxlength="50"
           />
         </ion-item>
-        <div *ngIf="errors['tipo_documento_id']">
-          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
-          <ion-text color="warning"> {{errors['tipo_documento_id']}}</ion-text>
-        </div>
-        <ion-item>
-          <ion-select
-            aria-label="Tipo de documento"
-            name="tipo_documento_id"
-            [(ngModel)]="userRegister.tipo_documento_id"
-          >
-            <ion-select-option value="" disabled
-              >Selecciona una opción</ion-select-option
-            >
-
-            <ion-select-option value="1"
-              >DOCUMENTO NACIONAL DE IDENTIDAD</ion-select-option
-            >
-            <ion-select-option value="2"
-              >CARNET DE EXTRANJERIA</ion-select-option
-            >
-            <ion-select-option value="3">PASAPORTE</ion-select-option>
-          </ion-select>
-        </ion-item>
-        <div *ngIf="errors['numero_documento']">
-          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
-          <ion-text color="warning"> {{errors['numero_documento']}}</ion-text>
-        </div>
-
-        <ion-item>
-          <ion-input
-            placeholder="DOCUMENTO"
-            type="number"
-            name="numero_documento"
-            [(ngModel)]="userRegister.numero_documento"
-          />
-        </ion-item>
         <div *ngIf="errors['email']">
           <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
           <ion-text color="warning"> {{errors['email']}}</ion-text>
@@ -112,33 +76,7 @@
             name="numero_celular"
             [(ngModel)]="userRegister.numero_celular"
           />
-        </ion-item>
-        <div *ngIf="errors['direccion_fiscal']">
-          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
-          <ion-text color="warning"> {{errors['direccion_fiscal']}}</ion-text>
-        </div>
-
-        <ion-item>
-          <ion-input
-            placeholder="DIRECCIÓN"
-            type="text"
-            name="direccion_fiscal"
-            [(ngModel)]="userRegister.direccion_fiscal"
-          />
-        </ion-item>
-
-        <div *ngIf="errors['password']">
-          <ion-icon name="alert-circle-outline" color="warning"></ion-icon>
-          <ion-text color="warning"> {{errors['password']}}</ion-text>
-        </div>
-        <ion-item>
-          <ion-input
-            placeholder="CONTRASEÑA"
-            type="text"
-            name="password"
-            [(ngModel)]="userRegister.password"
-          />
-        </ion-item>
+        </ion-item>   
       </ion-list>
       <ion-checkbox
         labelPlacement="end"

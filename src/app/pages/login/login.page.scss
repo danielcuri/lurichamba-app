@@ -1,20 +1,26 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
 ion-content {
   --background: none;
-  // --background: url('/assets/img/background.png') 0 0/100% 100% no-repeat;
-  background-color: #c51821;
+  --background: url("/assets/imgs/background_luri.png") 0 0/100% 100% no-repeat;
+  
   .img-header {
     text-align: center !important;
+    margin-top: 9rem;
     img {
       width: 80%;
     }
   }
   .text-login {
     text-align: center !important;
-    color: white !important;
+    color: #c51821 !important;
 
-    margin-top: 10px !important;
+    margin-top: 1rem !important;
     h1 {
       font-size: 28px !important;
+      font-weight: bold;
     }
   }
   .login {
